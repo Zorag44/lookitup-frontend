@@ -1,0 +1,13 @@
+<mat-toolbar class="mx-w-7xl mx-auto border-x justify-between">
+    <a routerLink="home" class="text-5xl" style="color: azure;">Lookitup</a>
+    <button mat-button [matMenuTriggerFor]="menu" class="text-2xl">
+        Shop owner?
+        <mat-icon>store</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" class="p-3">
+        <button mat-raised-button *ngIf="isLoggedIn()" (click)="logout()">Logout</button>
+        <button mat-raised-button *ngIf="!isLoggedIn()" (click)="openLoginSheet()">Login</button>
+        <button mat-raised-button *ngIf="!isLoggedIn()" (click)="openSheet()">Register</button>
+
+    </mat-menu>
+</mat-toolbar>

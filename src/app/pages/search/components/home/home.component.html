@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-header>
+        <button mat-button [disabled]="!isBtnActive" (click)="checkAvailability()" class=" bg-transparent hover:bg-green-500 py-2 px-4 text-3xl rounded justify-between">
+            Check availability
+        </button>
+    </mat-card-header>
+</mat-card>
+<mat-list class="divide-y m-10" *ngIf="isBtnActive">
+    <mat-card>List of Shops Nearby</mat-card>
+    <br>
+    <mat-list-item *ngFor="let key of userData" style="height: 15rem;">
+        <div>
+            <mat-card>
+                <mat-card-header>
+                    {{key.name}}
+                    <br>
+                    {{key.phone}}
+                </mat-card-header>
+                <mat-card-content>
+                    address : {{key.loc}}<br>
+                    <p>current availability : {{key.isAvailable}}</p>
+                    <br>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <br>
+    </mat-list-item>
+</mat-list>
+<!-- <div>
+    <mat-card>
+        <mat-card-header>simple card {{ind}}</mat-card-header>
+        <mat-card-content>content</mat-card-content>
+    </mat-card>
+</div>
+</mat-list-item>
+<mat-list-item>
+<div>
+    <mat-card>
+        <mat-card-header>simple card {{ind}}</mat-card-header>
+        <mat-card-content>content 2</mat-card-content>
+    </mat-card>
+</div> -->

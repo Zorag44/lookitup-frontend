@@ -1,0 +1,58 @@
+<div class="profile-picture">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Profile Picture</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-icon>picture</mat-icon>
+        <img src="profile-picture.jpg" alt="Profile Picture" class="picture">
+      </mat-card-content>
+    </mat-card>
+  </div>
+<div style="padding-left: 20rem; padding-right: 2rem;">
+    <mat-card>
+        <mat-card-header>
+          <mat-card-title style="padding-left: 17rem;">Welcome to your Profile</mat-card-title>
+        </mat-card-header>
+      
+        <mat-card-content style="padding-left: 18rem;">
+          <div class="profile-info">
+            <!-- <ng-container> -->
+              <mat-form-field appearance="fill">
+                <mat-label>Full Name</mat-label>
+                <input matInput placeholder="Full name" [(ngModel)]="user.name">
+              </mat-form-field>
+              <br>
+              <mat-form-field appearance="fill">
+                <mat-label>GSTIN</mat-label>
+                <input matInput placeholder="Your GST Number" [(ngModel)]="user.gstin">
+              </mat-form-field>
+              <br>
+              <mat-form-field appearance="fill">
+                <mat-label>Phone Number</mat-label>
+                <input matInput placeholder="Enter your phone number" [(ngModel)]="user.phone">
+              </mat-form-field>
+              <br>
+              <mat-form-field appearance="fill">
+                  <mat-label>Location</mat-label>
+                  <input matInput placeholder="Your Location" [(ngModel)]="user.loc">
+                </mat-form-field>
+              <br>
+              <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Your Password" [(ngModel)]="user.password">
+              </mat-form-field>
+            <br>
+              <div style="padding-left: 2rem;">
+                <button mat-raised-button color="primary" (click)="ok()">Update Profile</button>
+              </div>
+            <!-- </ng-container> -->
+            
+            
+          </div>
+      
+        </mat-card-content>
+      </mat-card>
+</div>
+
+  
